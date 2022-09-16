@@ -2,10 +2,11 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
+import en_core_web_sm
 
 
 def summarize(text, per):
-    nlp = spacy.load('en_core_web_sm')
+    nlp = en_core_web_sm.load()
     doc= nlp(text)
     tokens=[token.text for token in doc]
     word_frequencies={}
