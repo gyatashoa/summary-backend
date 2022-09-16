@@ -6,7 +6,7 @@ from summary import summarize as summary
 
 
 app = FastAPI()
-PER = os.environ.get('PER',0.5) 
+PER = float(os.environ.get('PER',0.5)) 
 
 
 @app.get('/ping')
