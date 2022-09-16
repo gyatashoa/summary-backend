@@ -6,7 +6,8 @@ from heapq import nlargest
 
 
 def summarize(text, per):
-    nlp = spacy.load(os.path.join(os.getcwd(),'en_core_web_sm-3.4.0.tar.gz'))
+    rel_path = 'en_core_web_sm-3.4.0/en_core_web_sm/en_core_web_sm-3.4.0'
+    nlp = spacy.load(os.path.join(os.getcwd(),rel_path))
     doc= nlp(text)
     tokens=[token.text for token in doc]
     word_frequencies={}
