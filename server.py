@@ -20,5 +20,5 @@ def summarize(req: Request_DTO):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app ,host='localhost',port=os.environ.get('PORT',8080))
+    uvicorn.run(app ,host='0.0.0.0',port=os.environ.get('PORT',8080))
     
