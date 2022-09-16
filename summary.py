@@ -1,12 +1,12 @@
 import spacy
+import os
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
-import en_core_web_sm
 
 
 def summarize(text, per):
-    nlp = en_core_web_sm.load()
+    nlp = spacy.load(os.path.join(os.path.dirname(),'en_core_web_sm-3.4.0.tar.gz'))
     doc= nlp(text)
     tokens=[token.text for token in doc]
     word_frequencies={}
